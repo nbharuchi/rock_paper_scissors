@@ -28,22 +28,37 @@ function getHumanChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    let score;
-    let number_of_rounds = prompt("enter the number of rounds you want to play to determine the winner:");
+    /*let score;
+    //let number_of_rounds = prompt("enter the number of rounds you want to play to determine the winner:");
+    let number_of_rounds = 5;
     for (i = 1; i <= number_of_rounds; i++) {
         let computerSelection = getComputerChoice(2);
         let humanSelection = getHumanChoice();
-        console.log(computerSelection);
-        console.log(humanSelection);
+        console.log("computer chooses :", computerSelection);
+        console.log("human chooses:", humanSelection);
+        if (humanSelection === "Invalid choice") {
+            console.log("Enter valid choice. try again");
+            //playGame();
+            break;
+        }
         score = playRound(computerSelection, humanSelection);
         if (score === 1) {
             computerScore++;
             console.log("computer Score:", computerScore);
+            console.log("human score:", humanScore);
         } else if (score === -1) {
             humanScore++;
             console.log("human score:", humanScore);
+            console.log("computer Score:", computerScore);
         }
-    }
+    }*/
+    const rockbtn = document.createElement("button");
+    rockbtn.textContent = "ROCK";
+    const paperbtn = document.createElement("button");
+    paperbtn.textContent = "PAPER";
+    const scissorbtn = document.createElement("button");
+    scissorbtn.textContent = "SCISSORS";
+
     if (humanScore > computerScore) {
         console.log("human wins with a score of :", humanScore);
     } else if (computerScore > humanScore) {
