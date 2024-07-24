@@ -12,8 +12,8 @@ function getComputerChoice(max) {
     }
 
 }
-function getHumanChoice() {
-    let humanChoice = prompt("What's your choice?");
+/*function getHumanChoice() {
+    /*let humanChoice = prompt("What's your choice?");
     if (humanChoice.toUpperCase() === "ROCK") {
         return humanChoice;
     } else if (humanChoice.toUpperCase() === "PAPER") {
@@ -22,18 +22,75 @@ function getHumanChoice() {
         return humanChoice;
     } else {
         return "Invalid choice";
-    }
-}
+    }*/
+/*let humanChoice;
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    humanChoice = "ROCK";
+    playRound(humanChoice);
+});
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    playGame();
+});
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    playGame();
+});
+
+
+/*let choice;
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+        alert(button.id);
+        alert(event.target.id);
+        console.log(button.id);
+        //choice = button.id;
+        return choice;
+    });
+});
+
+
+
+
+}*/
+
+let humanSelection;
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    humanSelection = "ROCK";
+    playGame();
+    //playRound(humanSelection);
+});
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    humanSelection = "PAPER";
+    playGame();
+});
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    humanSelection = "SCISSORS";
+    playGame();
+});
 
 function playGame() {
+
+
+
+
     let humanScore = 0;
     let computerScore = 0;
-    /*let score;
+    let score;
     //let number_of_rounds = prompt("enter the number of rounds you want to play to determine the winner:");
     let number_of_rounds = 5;
     for (i = 1; i <= number_of_rounds; i++) {
         let computerSelection = getComputerChoice(2);
-        let humanSelection = getHumanChoice();
+
+        //let humanSelection = getHumanChoice();
+
+
+
         console.log("computer chooses :", computerSelection);
         console.log("human chooses:", humanSelection);
         if (humanSelection === "Invalid choice") {
@@ -51,13 +108,8 @@ function playGame() {
             console.log("human score:", humanScore);
             console.log("computer Score:", computerScore);
         }
-    }*/
-    const rockbtn = document.createElement("button");
-    rockbtn.textContent = "ROCK";
-    const paperbtn = document.createElement("button");
-    paperbtn.textContent = "PAPER";
-    const scissorbtn = document.createElement("button");
-    scissorbtn.textContent = "SCISSORS";
+    }
+
 
     if (humanScore > computerScore) {
         console.log("human wins with a score of :", humanScore);
@@ -82,6 +134,10 @@ function playGame() {
             return -1;
         }
     }
+
+
+
+
 
 }
 playGame();
